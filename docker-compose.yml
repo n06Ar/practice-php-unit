@@ -6,7 +6,7 @@ services:
       context: ./docker
     restart: always
     volumes:
-    - ./src:/var/www/html
+    - ./app:/var/www/html
     - ./docker/php.ini:/usr/local/etc/php/php.ini
     ports:
         - "10080:80"
