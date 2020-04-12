@@ -1,15 +1,16 @@
 version: "3"
 
 services:
-  php:
-    build:
-      context: ./docker
-    restart: always
-    volumes:
-    - ./app:/var/www/html
-    - ./docker/php.ini:/usr/local/etc/php/php.ini
-    ports:
-        - "10080:80"
-        - "2222:22"
-    tty: true
-    stdin_open: true
+    php:
+        build:
+            context: ./docker
+        container_name: php
+        restart: always
+        volumes:
+            - ./:/var/www/php
+            - ./docker/php.ini:/usr/local/etc/php/php.ini
+        ports:
+            - "10080:80"
+            - "2222:22"
+        tty: true
+        stdin_open: true
