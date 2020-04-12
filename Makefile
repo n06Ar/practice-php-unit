@@ -1,4 +1,4 @@
-SERVICE=PHP
+SERVICE=php
 COMMAND=/bin/bash
 
 .PHONY: up down run exec
@@ -9,4 +9,4 @@ down:
 run:
 	docker-compose run --rm ${SERVICE} ${COMMAND}
 exec:
-	docker-composer exec ${SERVICE} ${COMMAND}
+	docker-compose exec ${SERVICE} ${COMMAND}
