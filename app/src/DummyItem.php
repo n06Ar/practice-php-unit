@@ -4,6 +4,13 @@ namespace App;
 
 interface DummyItem
 {
-    public function getName();
-    public function getId();
+    /**
+     * @return string
+     */
+    public function getName():string;
+
+    /**
+     * @return string
+     */
+    public function getId():string;
 }

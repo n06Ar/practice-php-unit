@@ -38,7 +38,7 @@ class CsvRelation
         // 書き込むファイルの読み込み
         $fp = fopen($filePath, 'w');
         foreach ($csvArray as $array){
-            if (is_array($array)) {
+            if (!is_array($array)) {
                 return false;
             }
             fputcsv($fp, $array);
